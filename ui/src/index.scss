@@ -1,45 +1,9 @@
-// reference: https://getbootstrap.com/docs/5.1/customize/sass/
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// bootstrap overrides
+$primary: rgb(94, 94, 94);
+
 @import "~bootstrap/scss/bootstrap";
-@import "../node_modules/bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
-$primary: #00d95a;
-$info: #00d95a;
-$danger: #ff4136;
 
 
-$accordion-color:                         $primary;
-$accordion-bg:                            $primary;
-$accordion-border-color:                  $primary;
-$accordion-button-color:                  $primary;
-$accordion-button-bg:                     $primary;
-$accordion-button-active-bg:              $primary;
-$accordion-button-active-color:           $primary;
-
-$accordion-button-focus-border-color:     $primary;
-$accordion-icon-color:                    $primary;
-$accordion-icon-active-color:             $primary;
-
-
-// 3. Include remainder of required Bootstrap stylesheets
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
-
-// 4. Include any optional Bootstrap CSS as needed
-@import "../node_modules/bootstrap/scss/utilities";
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
-@import "../node_modules/bootstrap/scss/images";
-@import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/helpers";
-
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "../node_modules/bootstrap/scss/utilities/api";
-
-// 6. Add additional custom code here
 body {
     margin: 0;
     padding: 1%;
@@ -47,5 +11,4 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-  }
-  
+}
