@@ -12,6 +12,6 @@ RUN npm install && npm run build
 RUN mv build/* /usr/share/nginx/html
 
 WORKDIR /home
-RUN  rm -R /tmp/build
+# RUN  rm -R /tmp/build
 
 CMD ["nginx", "-g", "daemon off;"]

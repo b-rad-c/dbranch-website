@@ -13,7 +13,7 @@ export default function App() {
       <h1 className="title">dBranch.news</h1>
 
       <Stack className="justify-content-center" direction="horizontal" gap={4} >
-        <NavLink exact className="navLink" to="/">Home</NavLink>
+        <NavLink exact="true" className="navLink" to="/">Home</NavLink>
         <div className="vr" />
         <NavLink className="navLink" to="/contact">Contact</NavLink>
       </Stack>
