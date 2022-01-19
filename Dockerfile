@@ -8,10 +8,12 @@ WORKDIR /tmp/build
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY ui/ .
 
+RUN npm install -g serve
 RUN npm install && npm run build
-RUN mv build/* /usr/share/nginx/html
+CMD ["serve", "-p", "80", "-s", "build"]
+#RUN mv build/* /usr/share/nginx/html
 
-WORKDIR /home
-# RUN  rm -R /tmp/build
+#WORKDIR /home
+#RUN  rm -R /tmp/build
 
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]

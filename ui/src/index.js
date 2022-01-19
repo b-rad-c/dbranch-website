@@ -1,10 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss'
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Home from "./routes/Home";
 import Contact from "./routes/Contact";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.scss'
 
 const rootElement = document.getElementById("root");
 render(
