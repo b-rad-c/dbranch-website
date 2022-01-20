@@ -1,19 +1,14 @@
-FROM nginx
-RUN apt-get update
-RUN apt-get -y install npm=7.5.2+ds-2
+FROM node:16
+EXPOSE 80
+#ENV DEBIAN_FRONTEND=noninteractive
+#RUN apt-get update
+#RUN apt-get -yq install npm
+RUN npm install -g serve
 
-RUN rm /usr/share/nginx/html/*
-WORKDIR /tmp/build
-
-COPY nginx.conf /etc/nginx/nginx.conf
+WORKDIR /app
 COPY ui/ .
 
-RUN npm install -g serve
 RUN npm install && npm run build
+RUN rm -R node_modules
+
 CMD ["serve", "-p", "80", "-s", "build"]
-#RUN mv build/* /usr/share/nginx/html
-
-#WORKDIR /home
-#RUN  rm -R /tmp/build
-
-#CMD ["nginx", "-g", "daemon off;"]
