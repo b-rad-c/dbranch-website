@@ -1,9 +1,6 @@
-FROM node:16
+FROM node:16.13.2-slim
 EXPOSE 80
-#ENV DEBIAN_FRONTEND=noninteractive
-#RUN apt-get update
-#RUN apt-get -yq install npm
-RUN npm install -g serve
+RUN npm install -g serve@13.0.2
 
 WORKDIR /app
 COPY ui/ .
