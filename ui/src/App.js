@@ -14,7 +14,7 @@ export default function App() {
 
       <Stack className="justify-content-center" direction="horizontal" gap={4} >
         <NavLink exact="true" className="navLink" to="/">Home</NavLink>
-        <div className="vr" />
+          <div className="vr" />
         <NavLink className="navLink" to="/contact">Contact</NavLink>
       </Stack>
       

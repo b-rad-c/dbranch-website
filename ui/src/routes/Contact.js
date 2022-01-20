@@ -1,7 +1,10 @@
 import Container from 'react-bootstrap/Container'
 import Stack from 'react-bootstrap/Stack'
-import * as URLs from '../constants';
+import * as constants from '../constants';
+import { URL } from '../constants'
 import './Contact.scss'
+
+const stackGap = 3
 
 export default function About() {
     return (
@@ -9,32 +12,32 @@ export default function About() {
             <h1>Contact</h1>
             <Container>
                 <h3>dBranch</h3>
-                <Stack className="justify-content-center" direction="horizontal" gap={4}>
-                    <a href={URLs.dBranchTwitter} rel="noreferrer" target="_blank">twitter</a>
+                <Stack className="justify-content-center" direction="horizontal" gap={stackGap}>
+                    <URL url={constants.dBranchTwitter} text="twitter"/>
                         <div className="vr" />
-                    <a href={URLs.dBranchGettr} rel="noreferrer" target="_blank">getter</a>
+                    <URL url={constants.dBranchGettr} text="getter"/>
                         <div className="vr" />
-                    <a href={URLs.dBranchDiscord} rel="noreferrer" target="_blank">discord</a>
+                    <URL url={constants.dBranchDiscord} text="discord"/>
                         <div className="vr" />
-                    <a href={URLs.dBranchEmailList} rel="noreferrer" target="_blank">email list</a>
+                    <URL url={constants.dBranchEmailList} text="email list"/>
                         <div className="vr" />
-                    <a href={URLs.dBranchVolunteerForm} rel="noreferrer" target="_blank">volunteer signup</a>
+                    <URL url={constants.dBranchVolunteerForm} text="help"/>
                 </Stack>
 
                 <h3>Brad Corlett (founder)</h3>
-                <Stack className="justify-content-center" direction="horizontal" gap={4}>
-                    <a href={URLs.personalTwitter} rel="noreferrer" target="_blank">twitter</a>
+                <Stack className="justify-content-center" direction="horizontal" gap={stackGap}>
+                    <URL url={constants.personalTwitter} text="twitter"/>
                         <div className="vr" />
-                    <a href={URLs.personalGettr} rel="noreferrer" target="_blank">gettr</a>
+                    <URL url={constants.personalGettr} text="gettr"/>
                         <div className="vr" />
-                    <a href={URLs.personalLinkedIn} rel="noreferrer" target="_blank">linkedin</a>
+                    <URL url={constants.personalLinkedIn} text="linkedin"/>
                 </Stack>
 
                 <h3>Podcast</h3>
-                <Stack className="justify-content-center" direction="horizontal" gap={4}>
-                    <a href={URLs.podcastTwitter} rel="noreferrer" target="_blank">twitter</a>
+                <Stack className="justify-content-center" direction="horizontal" gap={stackGap}>
+                    <URL url={constants.podcastTwitter} text="twitter"/>
                     <div className="vr" />
-                    <a href={URLs.podcastYouTube} rel="noreferrer" target="_blank">youtube</a>
+                    <URL url={constants.podcastYouTube} text="youtube"/>
                 </Stack>
             </Container>
             
