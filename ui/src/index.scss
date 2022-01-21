@@ -3,6 +3,9 @@ $primary: rgb(94, 94, 94);
 
 @import "~bootstrap/scss/bootstrap";
 
+/*
+globals
+*/
 
 body {
     margin: 0;
@@ -11,4 +14,48 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
+}
+
+h3{
+    margin-top: 3rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.accordion-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.leftAlignedContent {
+    text-align: left;
+}
+
+/*
+  page header
+*/
+
+.title {
+    font-size: 5.5rem;
+}
+  
+@include media-breakpoint-down(md) {
+    .title {
+        font-size: 3.5rem;
+    }
+}
+
+.navLink {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: none;
+    background: rgba(125, 125, 125, .1);
+    border-radius: 75%;
 }

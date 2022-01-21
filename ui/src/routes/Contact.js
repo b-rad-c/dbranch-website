@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container'
 import Stack from 'react-bootstrap/Stack'
 import * as constants from '../constants';
 import { URL } from '../constants'
-import './Contact.scss'
 
 const stackGap = 3
 

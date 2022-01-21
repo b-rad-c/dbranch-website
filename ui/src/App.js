@@ -1,8 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
 import Stack from 'react-bootstrap/Stack'
 import Container from 'react-bootstrap/Container'
-import './App.scss'
-
 
 
 export default function App() {
