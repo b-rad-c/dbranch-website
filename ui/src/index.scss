@@ -1,5 +1,6 @@
 // bootstrap overrides
 $primary: rgb(94, 94, 94);
+$secondary: rgba(125, 125, 125, .1);
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -17,7 +18,6 @@ body {
 }
 
 h3{
-    margin-top: 3rem;
     font-size: 1.25rem;
     font-weight: bold;
 }
@@ -29,6 +29,14 @@ h3{
 
 .leftAlignedContent {
     text-align: left;
+}
+
+.t-spacer-sm {
+    margin-top: 1rem;
+}
+
+.t-spacer-lg {
+    margin-top: 3rem;
 }
 
 /*

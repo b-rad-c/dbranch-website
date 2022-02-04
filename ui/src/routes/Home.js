@@ -12,7 +12,7 @@ export default function About() {
             <p>The dBranch DAO will maintain open source software and the protocol. It will be permissionless, use censorship resistant infrastructure, and it will have immutable versioned history. Anyone can participate in any branch as a freelancer, DAO or other. The vision is a diverse ecosystem with many participants experimenting with various governance and hierarchy models. </p>
 
             <h1>The Branches</h1>
-            <Accordion defaultActiveKey="0">
+            <Accordion>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header><h2>Audience</h2></Accordion.Header>
                     <Accordion.Body>
