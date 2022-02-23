@@ -4,28 +4,30 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Home from "./routes/Home";
-import Contact from "./routes/Contact";
-import WhitePaper from "./routes/WhitePaper";
+import Branches from "./routes/Branches";
+import Info from "./routes/Info";
 
 const rootElement = document.getElementById("root");
 render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
-        <Route path="white-paper" element={<WhitePaper />} />
-        <Route path="contact" element={<Contact />} />
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: "1rem" }}>
-              <p>Page not found!</p>
-            </main>
-          }
-        />
-      </Route>
-    </Routes>
+  <div className="app position-absolute top-0 start-0 bg-light bg-gradient">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="branches" element={<Branches />} />
+          <Route path="info" element={<Info />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>Page not found!</p>
+              </main>
+            }
+          />
+        </Route>
+      </Routes>
 
-  </BrowserRouter>,
+    </BrowserRouter>
+  </div>,
   rootElement
 );
