@@ -84,6 +84,11 @@ p{
     font-size: 6rem;
     margin-bottom: 0;
     padding-bottom: 0;
+    cursor: pointer;
+}
+
+.title:hover {
+    text-decoration: underline;
 }
 
 @include media-breakpoint-down(md) {

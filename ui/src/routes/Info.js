@@ -9,15 +9,17 @@ export default function Info() {
             <h1>Info stuffs</h1>
 
             <p className={pClass}>
-                <h2>White paper</h2>
-                ::&nbsp;<ExternalLink url={constants.whitePaper}>download</ExternalLink>
-            </p>
-
-            <p className={pClass}>
                 <h2>Media</h2>
                 ::&nbsp;<ExternalLink url={constants.medium}>medium</ExternalLink>
                 <br />
                 ::&nbsp;<ExternalLink url={constants.youTubePlaylist}>youtube</ExternalLink>
+            </p>
+
+            <p className={pClass}>
+                <h2>Technical</h2>
+                ::&nbsp;<ExternalLink url={constants.github}>Github</ExternalLink>
+                <br />
+                ::&nbsp;<ExternalLink url={constants.whitePaper}>White paper</ExternalLink>
             </p>
 
             <p className={pClass}>
@@ -30,7 +32,7 @@ export default function Info() {
                 <br />
                 ::&nbsp;<ExternalLink url={constants.volunteerForm}>help</ExternalLink>
                 <br />
-                ::&nbsp;<a href={"mailto:" + constants.emailAddress}>{constants.emailAddress}</a>
+                ::&nbsp;<a href={'mailto:' + constants.emailAddress}>{constants.emailAddress}</a>
             </p>
         </div>
         
