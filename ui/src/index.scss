@@ -4,6 +4,8 @@ $secondary: rgba(125, 125, 125, .1);
 $light: rgba(224, 224, 224, 1);
 $dark: rgba(20, 20, 20, 1);
 
+$primaryFont: 'Courier New', Courier, monospace;
+
 @import "~bootstrap/scss/bootstrap";
 
 /*
@@ -133,6 +135,12 @@ info page
 .info-content {
     width: 60%;
     margin: 1rem auto;
+    color: $dark;
+    text-align: left;
+}
+
+.info-content p {
+    color: $dark;
 }
 
 @include media-breakpoint-down(md) {
@@ -147,4 +155,78 @@ info page
         width: 100%;
         margin: 1rem auto;
     }
+}
+
+/*
+article reader
+*/
+
+.article-reader-modal {
+    max-width: 70%;
+    color: $dark;
+}
+
+.article-reader-container {
+    color: $dark;
+    text-align: left;
+}
+
+.article-reader-header {
+    margin: 0 auto;
+}
+
+.article-reader-title {
+    font-size: 3rem;
+}
+
+.article-reader-subtitle {
+    font-size: 1.25rem;
+}
+
+.article-reader-by-line {
+    border-bottom-style: solid;
+    border-bottom-color: $primary;
+    border-bottom-width: .1rem;
+    color: $dark;
+}
+
+.article-reader-body {
+    font-family: $primaryFont;
+    position: relative;
+    top: -1rem;
+    text-align: left;
+    color: $dark;
+}
+
+.article-reader-body p {
+    color: $dark;
+}
+
+.article-reader-body h1, .article-reader-body h2, .article-reader-body h3 {
+    margin-top: 1rem;
+}
+
+/*
+article list
+*/
+
+.article-list-item {
+    color: $dark;
+    text-align: left;
+    cursor: pointer;
+}
+
+.article-list-item-title {
+    font-size: 1.5rem;
+}
+
+.article-list-item-subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.article-list-item-byline {
+    color: $dark;
+    font-size: 1.1rem;
+    font-style: italic;
 }

@@ -1,29 +1,28 @@
 import * as constants from '../constants';
 import { ExternalLink } from '../constants'
 
-const pClass = 'text-dark text-start info-content'
 export default function Info() {
     return (
     <main>
-        <div className='text-dark'>
+        <div className='info-content'>
             <h1>Info stuffs</h1>
 
-            <p className={pClass}>
-                <h2>Media</h2>
+            <h2>Media</h2>
+            <p>
                 ::&nbsp;<ExternalLink url={constants.medium}>medium</ExternalLink>
                 <br />
                 ::&nbsp;<ExternalLink url={constants.youTubePlaylist}>youtube</ExternalLink>
             </p>
-
-            <p className={pClass}>
-                <h2>Technical</h2>
+            
+            <h2>Technical</h2>
+            <p>
                 ::&nbsp;<ExternalLink url={constants.github}>Github</ExternalLink>
                 <br />
                 ::&nbsp;<ExternalLink url={constants.whitePaper}>White paper</ExternalLink>
             </p>
 
-            <p className={pClass}>
-                <h2>Contact</h2>
+            <h2>Contact</h2>
+            <p>
                 ::&nbsp;<ExternalLink url={constants.twitter}>twitter</ExternalLink>
                 <br />
                 ::&nbsp;<ExternalLink url={constants.discord}>discord</ExternalLink>

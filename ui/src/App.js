@@ -18,7 +18,7 @@ export default function App() {
             <span className='navLink'>::</span>
           <NavLink className='navLink' to='/info'>Info</NavLink>
             <span className='navLink'>::</span>
-          <NavLink exact='true' className='navLink' to='/content'>Content</NavLink>
+          <NavLink exact='true' className='navLink' to='/app'>App</NavLink>
         </Stack>
         
       </div>
