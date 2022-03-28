@@ -170,6 +170,12 @@ article reader
     color: $dark;
 }
 
+@include media-breakpoint-down(md) {
+    .article-reader-modal {
+        max-width: 95%;
+    }
+}
+
 .article-reader-container {
     color: $dark;
     text-align: left;
