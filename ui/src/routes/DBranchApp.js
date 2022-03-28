@@ -1,11 +1,14 @@
 import { create } from 'ipfs-http-client'
 import { listDir, loadArticleFromIPFS, ArticleList, ArticleReaderModal } from 'dbranch-core'
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const ipfs = create('https://ipfs.dBranch.news')
 const curatedPrefix = '/dBranch/curated'
 
 export default function DBranchApp() {
+
+    let [searchParams, setSearchParams] = useSearchParams()
 
     const [articleNames, setArticleNames] = useState([])
     const [articles, setArticles] = useState([])
@@ -13,13 +16,16 @@ export default function DBranchApp() {
     const selectedArticle = selectedIndex >= 0 ? articles[selectedIndex] : null
     const [showArticle, setShowArticle] = useState(false)
 
-    const openArticle = (index) => { setSelectedIndex(index); setShowArticle(true) }
-    const closeArticle = () => setShowArticle(false)
+    const openArticle = (index) => { 
+        setSelectedIndex(index)
+        setShowArticle(true) 
+        setSearchParams({article: articleNames[index]})
+    }
+    const closeArticle = () => { setShowArticle(false); setSearchParams({article: ''}) }
 
     useEffect(() => { 
         listDir(ipfs, curatedPrefix)
             .then((result) => {
-                console.log('article listing', result)
                 setArticleNames(result)
             }).catch((error) => { 
                 console.error(error) 
@@ -27,7 +33,7 @@ export default function DBranchApp() {
     }, []);
 
     useEffect(() => { 
-        console.log('fetching articles')
+        if(articleNames.length > 0) {
         let fetches = []
         for (const name of articleNames) {
             const path = curatedPrefix + '/' + name
@@ -36,9 +42,23 @@ export default function DBranchApp() {
         }
 
         Promise.all(fetches)
-            .then((result) => { setArticles(result) })
+            .then((result) => { 
+                setArticles(result) 
+                const query = searchParams.get('article')
+                const queryIndex = articleNames.indexOf(query)
+                if(query !== null) {
+                    
+                    if(queryIndex === -1) {
+                        setSearchParams({article: ''})
+                    }else{
+                        openArticle(articleNames.indexOf(query))
+                    }
+                }
+            })
             .catch((error) => { console.error(error) })
-        
+        }
+    
+    // eslint-disable-next-line
     }, [articleNames]);
 
 return (
