@@ -14,11 +14,9 @@ export default function App() {
         <h1 className='subtitle' onClick={() => navigate('/')}>a decentralized marketplace for journalism</h1>
 
         <Stack className='justify-content-center' direction='horizontal' gap={3} >
-          <NavLink exact='true' className='navLink' to='/branches'>Branches</NavLink>
+          <NavLink exact='true' className='navLink' to='/app'>App</NavLink>
             <span className='navLink'>::</span>
           <NavLink className='navLink' to='/info'>Info</NavLink>
-            <span className='navLink'>::</span>
-          <NavLink exact='true' className='navLink' to='/app'>App</NavLink>
         </Stack>
         
       </div>

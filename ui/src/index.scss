@@ -48,9 +48,9 @@ h3{
     color: $white;
 }
 
-p{
+p, ul, ol {
     font-size: 1.25rem;
-    color: $white;
+    color: $dark;
 }
 
 .app{
@@ -71,11 +71,44 @@ p{
     width: 65%;
 }
 
-.content {
+.dark-content {
     background-color: $dark;
     color: $white;
     text-align: left;
     padding: 1rem;
+}
+
+.dark-content p {
+    color: $white;
+}
+
+/* 
+content
+*/
+
+.content {
+    width: 60%;
+    margin: 1rem auto;
+    color: $dark;
+    text-align: left;
+}
+
+.content p {
+    color: $dark;
+}
+
+@include media-breakpoint-down(md) {
+    .content {
+        width: 81%;
+        margin: 1rem auto;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .content {
+        width: 100%;
+        margin: 1rem auto;
+    }
 }
 
 /*
@@ -119,42 +152,13 @@ p{
     font-size: 1.25rem;
 }
 
-.navLink:hover {
+.navLink:hover a {
     text-decoration: underline;
     color: $dark;
 }
 
 .active {
     text-decoration: underline;
-}
-
-/* 
-info page
-*/
-
-.info-content {
-    width: 60%;
-    margin: 1rem auto;
-    color: $dark;
-    text-align: left;
-}
-
-.info-content p {
-    color: $dark;
-}
-
-@include media-breakpoint-down(md) {
-    .info-content {
-        width: 81%;
-        margin: 1rem auto;
-    }
-}
-
-@include media-breakpoint-down(sm) {
-    .info-content {
-        width: 100%;
-        margin: 1rem auto;
-    }
 }
 
 /*
@@ -173,6 +177,7 @@ article reader
 
 .article-reader-header {
     margin: 0 auto;
+    margin-bottom: 1.5rem;
 }
 
 .article-reader-title {
@@ -218,11 +223,13 @@ article list
 
 .article-list-item-title {
     font-size: 1.5rem;
+    margin-bottom: .5rem;
 }
 
 .article-list-item-subtitle {
     font-size: 1.1rem;
     font-weight: bold;
+    margin-bottom: .5rem;
 }
 
 .article-list-item-byline {

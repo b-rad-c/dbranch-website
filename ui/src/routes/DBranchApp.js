@@ -43,8 +43,9 @@ export default function DBranchApp() {
 
 return (
 <main>
-    <div className='text-dark'>
-        <h1>dBranch app</h1>
+    <h1>dBranch app</h1>
+    
+    <div className='content'>
         {showArticle && <ArticleReaderModal 
                             article={selectedArticle} 
                             show={showArticle} 
