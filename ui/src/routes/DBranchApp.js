@@ -72,14 +72,11 @@ export default function DBranchApp() {
     const [walletAddress, setWalletAddress] = useState(null)
     const [walletNetwork, setWalletNetwork] = useState(null)
     const [walletError, setWalletError] = useState(null)
-    // const [cardanoWASM, setCardanoWASM] = useState(null)
 
     async function connectNami() {
         window.cardano.nami.enable()
             .then(async (api) => {
                 const nami = await import('nami-wallet-api')
-                // const cardanoSerialization = await import('@emurgo/cardano-serialization-lib-browser')
-                // setCardanoWASM(cardanoSerialization)
 
                 const namiAPI = await nami.NamiWalletApi(
                     api,
@@ -169,7 +166,7 @@ export default function DBranchApp() {
                 address: walletAddress,
                 amount: .5,
                 metadata: {
-                    article: 'dbranch_intro.news',
+                    name: 'dbranch_intro.news',
                     loc: 'ipfs://QmeJ3aARqJrAKjnyAEc88TQS32GdxXmA8JmFauKKiHPiYi'
                 },
                 metadataLabel: '451'
