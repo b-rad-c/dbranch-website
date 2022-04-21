@@ -8,6 +8,11 @@ $primaryFont: 'Courier New', Courier, monospace;
 
 @import "~bootstrap/scss/bootstrap";
 
+.alert {
+    width: 50%;
+    margin: 0 auto;
+}
+
 /*
 globals
 */
@@ -197,6 +202,10 @@ article reader
 }
 
 .article-reader-by-line {
+    border-top-style: solid;
+    border-top-color: $primary;
+    border-top-width: .1rem;
+
     border-bottom-style: solid;
     border-bottom-color: $primary;
     border-bottom-width: .1rem;
@@ -228,24 +237,24 @@ article reader
 article list
 */
 
-.article-list-item {
+.article-index-item {
     color: $dark;
     text-align: left;
     cursor: pointer;
 }
 
-.article-list-item-title {
+.article-index-item-title {
     font-size: 1.5rem;
     margin-bottom: .5rem;
 }
 
-.article-list-item-subtitle {
+.article-index-item-subtitle {
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: .5rem;
 }
 
-.article-list-item-byline {
+.article-index-item-byline {
     color: $dark;
     font-size: 1.1rem;
     font-style: italic;

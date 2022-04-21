@@ -11,3 +11,12 @@ export const whitePaper = '/dBranch-white-paper-v1.pdf'
 export const youTubePlaylist = 'https://youtube.com/playlist?list=PLsZItVIVXWEEQHTlYKjmn7FfzqNzxfZUU'
 
 export function ExternalLink(props) { return <a href={props.url} rel="noreferrer" target="_blank">{props.children}</a>; }
+
+let _ipfsHost
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    _ipfsHost = 'http://localhost:5001'
+} else {
+    _ipfsHost = 'https://ipfs.dBranch.news'
+}
+
+export const ipfsHost = _ipfsHost
