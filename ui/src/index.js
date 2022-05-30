@@ -3,7 +3,7 @@ import './index.scss'
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
-import DBranchApp from './routes/DBranchApp';
+import Articles from './routes/Articles';
 import Home from './routes/Home';
 import Info from './routes/Info';
 
@@ -14,7 +14,7 @@ render(
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
-          <Route path='app' element={<DBranchApp />} />
+          <Route path='articles' element={<Articles />} />
           <Route path='info' element={<Info />} />
           <Route
             path='*'

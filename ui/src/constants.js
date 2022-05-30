@@ -12,11 +12,11 @@ export const youTubePlaylist = 'https://youtube.com/playlist?list=PLsZItVIVXWEEQ
 
 export function ExternalLink(props) { return <a href={props.url} rel="noreferrer" target="_blank">{props.children}</a>; }
 
-let _ipfsHost
+let _dbranchAPIHost
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    _ipfsHost = 'http://localhost:5001'
+    _dbranchAPIHost = 'http://localhost:1323'
 } else {
-    _ipfsHost = 'https://ipfs.dBranch.news'
+    _dbranchAPIHost = 'https://ipfs.dBranch.news:1323'
 }
 
-export const ipfsHost = _ipfsHost
+export const dbranchAPIHost = _dbranchAPIHost
