@@ -92,7 +92,6 @@ content
 */
 
 .content {
-    width: 60%;
     margin: 1rem auto;
     color: $dark;
     text-align: left;
@@ -100,6 +99,10 @@ content
 
 .content p {
     color: $dark;
+}
+
+.narrow-content {
+    width: 60%;
 }
 
 @include media-breakpoint-down(md) {
@@ -197,12 +200,14 @@ article reader
 }
 
 .article-reader-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     text-align: center;
     margin-bottom: 1rem;
 }
 
 .article-reader-by-line {
+    font-size: 1.15rem;
+
     border-top-style: solid;
     border-top-color: $primary;
     border-top-width: .1rem;

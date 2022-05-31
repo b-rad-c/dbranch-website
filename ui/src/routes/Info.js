@@ -4,7 +4,7 @@ import { ExternalLink } from '../constants'
 export default function Info() {
     return (
     <main>
-        <div className='content'>
+        <div className='content narrow-content'>
             <h1>Info stuffs</h1>
 
             <h2>Media</h2>
