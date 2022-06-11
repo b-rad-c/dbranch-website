@@ -1,4 +1,4 @@
-import { Outlet, useNavigate, NavLink } from 'react-router-dom';
+import { Outlet, useNavigate, NavLink } from 'react-router-dom'
 import Stack from 'react-bootstrap/Stack'
 import Container from 'react-bootstrap/Container'
 

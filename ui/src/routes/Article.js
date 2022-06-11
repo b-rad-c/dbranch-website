@@ -1,15 +1,16 @@
 import { dBranchAPI, ArticleReader, CardanoExplorerLink } from 'dbranch-core'
 import { useEffect, useState } from 'react'
 import { Spinner, Alert } from 'react-bootstrap'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import { dbranchAPIHost, ExternalLink } from '../constants'
 import { BoxArrowUpRight } from 'react-bootstrap-icons'
 
-const api = new dBranchAPI(dbranchAPIHost)
-
 export default function ArticlePage() {
 
+    const api = new dBranchAPI(dbranchAPIHost)
+
     let params = useParams()
+    let location = useLocation()
 
     const [loading, setLoading ] = useState(true)
     const [article, setArticle] = useState(null)
@@ -19,8 +20,10 @@ export default function ArticlePage() {
     const [errMsg, setErrMsg] = useState('')
 
     useEffect(() => { 
-        api.getArticle(params.articleName)
+        console.log('loading article: ' + params.cid)
+        api.getArticleByCid(params.cid, true)
             .then((article) => {
+                article.record = location.state.record
                 setArticle(article)
                 setExplorerURL(CardanoExplorerLink(article.record.cardano_tx_hash))
             }).catch((error) => {
@@ -30,8 +33,7 @@ export default function ArticlePage() {
             }).finally(() => {
                 setLoading(false)
             })
-    
-    }, [params.articleName])
+    }, [params.cid])
 
 return (
 <div>

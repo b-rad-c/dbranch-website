@@ -20,10 +20,10 @@ export default function ArticlesPage() {
     const [articleIndex, setArticleIndex] = useState(null)
     const showArticleIndex = articleIndex !== null
     
-    const navigateToArticle = (name) => { 
-        const url = `/articles/${name}`
+    const navigateToArticle = (record) => { 
+        const url = `/articles/${record.cid}`
         console.log('navigating to article', url)
-        navigate(url)
+        navigate(url, {state: {record: record}})
     }
 
     useEffect(() => { 

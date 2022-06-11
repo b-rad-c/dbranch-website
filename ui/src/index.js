@@ -16,7 +16,7 @@ render(
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
           <Route path='articles' element={<Articles />}>
-            <Route path=':articleName' element={<Article />} />
+            <Route path=':cid' element={<Article />} />
           </Route>
           <Route path='info' element={<Info />} />
           <Route
