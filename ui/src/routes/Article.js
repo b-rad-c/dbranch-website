@@ -33,6 +33,7 @@ export default function ArticlePage() {
             }).finally(() => {
                 setLoading(false)
             })
+    // eslint-disable-next-line
     }, [params.cid])
 
 return (
