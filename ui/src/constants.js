@@ -16,7 +16,6 @@ let _dbranchAPIHost
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     _dbranchAPIHost = 'http://localhost:1323'
 } else {
-    _dbranchAPIHost = 'https://ipfs.dBranch.news:1323'
+    _dbranchAPIHost = 'https://ipfs.dBranch.news'
 }
-
 export const dbranchAPIHost = _dbranchAPIHost
